@@ -66,7 +66,7 @@ class GetInStockSourceItemsBySkusAndSortedSource
             $itemsSorting[] = array_search($item->getSourceCode(), $sortedSourceCodes, true);
         }
 
-        array_multisort($itemsSorting, SORT_NUMERIC, SORT_ASC, $items);
+        array_multisort($itemsSorting, SORT_ASC, SORT_NUMERIC, $items);
         return $items;
     }
 }
